@@ -8,6 +8,9 @@ inputs:
   branch_name:
     description: 'The name of the new branch'
     required: true
+  org_name:
+    description: 'The name of the organization that owns the database'
+    required: true
 # outputs:
 #   time: # id of output
 #     description: 'The time we greeted you'
@@ -17,3 +20,4 @@ runs:
   args:
     - ${{ inputs.database_name }}
     - ${{ inputs.branch_name }}
+    - ${{ inputs.org_name }}
