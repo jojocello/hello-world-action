@@ -1,16 +1,19 @@
 # action.yml
-name: 'Hello World'
-description: 'Greet someone and record the time'
+name: 'Hello new branch!'
+description: 'Make a branch'
 inputs:
-  who-to-greet:  # id of input
-    description: 'Who to greet'
+  database_name:  # id of input
+    description: 'The name of the database'
     required: true
-    default: 'World'
-outputs:
-  time: # id of output
-    description: 'The time we greeted you'
+  branch_name:
+    description: 'The name of the new branch'
+    required: true
+# outputs:
+#   time: # id of output
+#     description: 'The time we greeted you'
 runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ inputs.who-to-greet }}
+    - ${{ inputs.database_name }}
+    - ${{ inputs.branch_name }}
