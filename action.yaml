@@ -2,7 +2,7 @@
 name: 'Hello new branch!'
 description: 'Make a branch'
 branding:
-  label: 'database'
+  icon: 'database'
   color: 'orange'
 inputs:
   database_name:  # id of input
