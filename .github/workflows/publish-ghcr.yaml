@@ -1,0 +1,17 @@
+# action.yml
+name: Docker Image CI for GHCR
+
+on:
+  push    # a chaque fois que la branche main du code est mise à jour, rebuild le conteneur et publie le
+
+jobs:
+  build_and_publish:
+    runs-on: ubuntu-latest    # run on a linux machine powered by ubuntu
+    steps:
+      - uses: actions/checkout@v3   # pull our code from the repository into the actions runner
+      - name: build and push the image
+        run:
+          docker login --username jojocello --password ${{ secrets.GH_PAT }} ghcr.io
+          docker build . --tag ghcr.io/jojocello/hello-world-ghcr:latest
+          docker push ghcr.io/jojocello/hello-world-ghcr:latest
+         
