@@ -1,3 +1,6 @@
+https://github.com/bmorrisondev/hello-world-action
+https://www.youtube.com/watch?v=RgZyX-e6W9E
+
 # Hello world docker action
 
 This action prints "Hello World" or "Hello" + the name of a person to greet to the log.
