@@ -8,9 +8,9 @@ jobs:
   build_and_publish:
     runs-on: ubuntu-latest    # run on a linux machine powered by ubuntu
     steps:
-      - uses: actions/checkout@v4   # pull our code from the repository into the actions runner
+      - uses: actions/checkout@v3   # pull our code from the repository into the actions runner
       - name: build and push the image
-        run:
+        run: |
           docker login --username jojocello --password ${{ secrets.GH_PAT }} ghcr.io
           docker build . --tag ghcr.io/jojocello/hello-world-ghcr:latest
           docker push ghcr.io/jojocello/hello-world-ghcr:latest
