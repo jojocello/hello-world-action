@@ -1,5 +1,5 @@
 # action.yml
-name: Docker Image CI for GHCR
+name: Docker CI for GHCR
 
 on:
   push    # a chaque fois que la branche main du code est mise à jour, rebuild le conteneur et publie le
